@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Defterim</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Not Defterim</a>
+        </div>
+    </nav>
+
+    <div class="container-md">
+        <div class="row">
+            <div class="col-sm-4">
+                <button id="btnYeni" class="btn btn-primary mb-3">Yeni</button>
+                <div class="list-group mb-3" id="lstNotlar"></div>
+            </div>
+            <div class="col-sm-8">
+                <form id="frmNot" action="#">
+                    <div class="mb-3">
+                        <input id="txtBaslik" type="text" class="form-control" placeholder="Başlık" required>
+                    </div>
+                    <div class="mb-3">
+                        <textarea id="txtIcerik" class="form-control" rows="15" placeholder="İçerik"></textarea>
+                    </div>
+                    <div>
+                        <button id="btnKaydet" type="submit" class="btn btn-primary">Kaydet</button>
+                        <button id="btnSil" type="button" class="btn btn-danger">Sil</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/site.js"></script>
+</body>
+
+</html>

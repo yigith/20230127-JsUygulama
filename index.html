@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" class="h-100">
 
 <head>
     <meta charset="UTF-8">
@@ -7,30 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Not Defterim</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
+<body class="h-100 d-flex flex-column">
+    <div id="cekmece" class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Not Defterim</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <button id="btnYeni" data-bs-dismiss="offcanvas" class="btn btn-primary mb-3">Yeni</button>
+            <div class="list-group mb-3 notlar"></div>
+        </div>
+    </div>
     <nav class="navbar navbar-dark bg-dark mb-4">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Not Defterim</a>
+            <ul class="navbar-nav me-3 d-sm-none">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#cekmece">
+                        <i class="fa-solid fa-bars fa-xl"></i>
+                    </a>
+                </li>
+            </ul>
+            <a class="navbar-brand me-auto" href="#">Not Defterim</a>
         </div>
     </nav>
 
-    <div class="container-md">
-        <div class="row">
-            <div class="col-sm-4">
+    <div class="container-md flex-grow-1">
+        <div class="row h-100">
+            <div class="col-sm-4 d-none d-sm-block">
                 <button id="btnYeni" class="btn btn-primary mb-3">Yeni</button>
-                <div class="list-group mb-3" id="lstNotlar"></div>
+                <div class="list-group mb-3 notlar"></div>
             </div>
             <div class="col-sm-8">
-                <form id="frmNot" action="#">
+                <form id="frmNot" class="h-100 d-flex flex-column" action="#">
                     <div class="mb-3">
                         <input id="txtBaslik" type="text" class="form-control" placeholder="Başlık" required>
                     </div>
-                    <div class="mb-3">
-                        <textarea id="txtIcerik" class="form-control" rows="15" placeholder="İçerik"></textarea>
+                    <div class="mb-3 flex-grow-1">
+                        <textarea id="txtIcerik" class="form-control h-100" rows="15" placeholder="İçerik"></textarea>
                     </div>
-                    <div>
+                    <div class="mb-3">
                         <button id="btnKaydet" type="submit" class="btn btn-primary">Kaydet</button>
                         <button id="btnSil" type="button" class="btn btn-danger">Sil</button>
                     </div>
@@ -41,6 +59,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.bundle.min.js" integrity="sha512-i9cEfJwUwViEPFKdC1enz4ZRGBj8YQo6QByFTF92YXHi7waCqyexvRD75S5NVTsSiTv7rKWqG9Y5eFxmRsOn0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="js/site.js"></script>
 </body>
 

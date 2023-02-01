@@ -112,7 +112,7 @@ function mesaj(icerik) {
     });
 }
 
-$("#btnYeni").click(yeni);
+$(".btnYeni").click(yeni);
 $("#btnSil").click(sil);
 $("#frmNot").submit(kaydet);
 
